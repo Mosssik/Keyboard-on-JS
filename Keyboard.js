@@ -1,23 +1,19 @@
-function EventsMouseKey(btn, key) {
+function initEventsListener() {
 
-  btn.addEventListener('mousedown', (event) => {
-    btn.classList.add('active')
-
-  })
-
-  btn.addEventListener('mouseup', (event) => {
-    btn.classList.remove('active')
-  })
-
+  document.addEventListener('click', (event) => {
+  if(event.target.dataset.click != undefined){
+  event.target.classList.add('active');
+    setTimeout(() => {
+      event.target.classList.remove('active')}, 200
+    )
+  }
+  });
+    
   document.addEventListener('keydown', (event) => {
-    if (event.key == key) {
-      btn.classList.add('active')
-    }
-  })
-
-  document.addEventListener('keyup', (event) => {
-    if (event.key == key) {
-      btn.classList.remove('active')
+    const code = event.code;
+    const ltr = querySelector(`#${code}`);
+    ltr.classList.add('active');
+    setTimeOut(()=>{ltr.classList.remove('active'),2000}
     }
   })
 }
@@ -37,6 +33,8 @@ const ltr = document.createElement('div');
 ltr.textContent = '` Ё';
 ltr.style.padding = '5px';
 ltr.style.border = 1 + 'px solid grey';
+ltr.setAtribute('id','Backquote');
+ltr.setAttribute('data-click','');
 line2.append(ltr);
 
 new EventsMouseKey(ltr, '`')
