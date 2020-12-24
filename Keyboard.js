@@ -3,7 +3,7 @@ function initEventsListener() {
   document.addEventListener('click', (event) => {
   if(event.target.dataset.click != undefined){
   event.target.classList.add('active');
-    setTimeout(() => {
+  setTimeout(() => {
       event.target.classList.remove('active')}, 200
     )
   }
@@ -11,12 +11,13 @@ function initEventsListener() {
     
   document.addEventListener('keydown', (event) => {
     const code = event.code;
-    const ltr = querySelector(`#${code}`);
-    ltr.classList.add('active');
-    setTimeOut(()=>{ltr.classList.remove('active'),2000}
-    }
-  })
+    const letr = document.querySelector(`#${code}`);
+    letr.classList.add('active');
+    setTimeout(()=>{letr.classList.remove('active')},200)
+})
 }
+
+initEventsListener();
 
 const wrapper = document.createElement('div');
 wrapper.style.border = 1 + 'px solid grey';
@@ -33,36 +34,33 @@ const ltr = document.createElement('div');
 ltr.textContent = '` Ё';
 ltr.style.padding = '5px';
 ltr.style.border = 1 + 'px solid grey';
-ltr.setAtribute('id','Backquote');
+ltr.setAttribute('id','Backquote');
 ltr.setAttribute('data-click','');
 line2.append(ltr);
-
-new EventsMouseKey(ltr, '`')
-new EventsMouseKey(ltr, 'ё')
 
 const num1 = document.createElement('div');
 num1.textContent = '1';
 num1.style.padding = '5px 10px';
 num1.style.border = 1 + 'px solid grey';
+num1.setAttribute('id','Digit1');
+num1.setAttribute('data-click','');
 line2.append(num1);
-
-new EventsMouseKey(num1, '1');
 
 const num2 = document.createElement('div');
 num2.textContent = '2';
 num2.style.padding = '5px 10px';
 num2.style.border = 1 + 'px solid grey';
+num2.setAttribute('id','Digit2');
+num2.setAttribute('data-click','');
 line2.append(num2);
-
-new EventsMouseKey(num2, '2');
 
 const num3 = document.createElement('div');
 num3.textContent = '3';
 num3.style.padding = '5px 10px';
 num3.style.border = 1 + 'px solid grey';
+num3.setAttribute('id','Digit3');
+num3.setAttribute('data-click','');
 line2.append(num3);
-
-new EventsMouseKey(num3, '3');
 
 const num4 = document.createElement('div');
 num4.textContent = '4';
