@@ -78,7 +78,7 @@ let array = [{
   },
   {
     textContent: 'Backspace',
-    padding: '5px 10px',
+    padding: '5px 16px',
     border: '1px solid grey',
     code: 'Backspace',
   },
@@ -247,9 +247,125 @@ let array3 = [{
     padding: '5px 10px',
     border: '1px solid grey',
     code: 'Enter',
+  }
+];
+
+let array4 = [{
+    textContent: 'LShift',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'ShiftLeft',
+  },
+  {
+    textContent: 'Z я',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'KeyZ',
+  },
+  {
+    textContent: 'X ч',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'KeyX',
+  },
+  {
+    textContent: 'C с',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'KeyC',
+  },
+  {
+    textContent: 'V м',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'KeyV',
+  },
+  {
+    textContent: 'B и',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'KeyB',
+  },
+  {
+    textContent: 'N т',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'KeyN',
+  },
+  {
+    textContent: 'M ь',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'KeyM',
+  },
+  {
+    textContent: ', б',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'Comma',
+  },
+  {
+    textContent: '. ю',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'Period',
+  },
+  {
+    textContent: '/ .',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'Slash',
+  },
+  {
+    textContent: 'RShift',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'ShiftRight',
   },
 ]
-
+let array5 = [{
+    textContent: 'Ctrl',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'ControlLeft',
+  },
+  {
+    textContent: 'Win',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'MetaLeft',
+  },
+  {
+    textContent: 'Alt',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'AltLeft',
+  },
+  {
+    textContent: ' ',
+    padding: '5px 100px',
+    border: '1px solid grey',
+    code: 'Space',
+  },
+  {
+    textContent: 'Alt gr',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'AltRight',
+  },
+  {
+    textContent: 'Win',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'MetaRight',
+  },
+  {
+    textContent: 'Ctrl',
+    padding: '5px 10px',
+    border: '1px solid grey',
+    code: 'ControlRight',
+  },
+];
 
 function initEventsListener() {
 
@@ -324,202 +440,34 @@ array3.forEach((e) => {
   line4.append(ltr);
 });
 
-
 const line5 = document.createElement('div');
 line5.style.display = 'flex';
 line5.style.margin = '0 0 3px 0';
-
 wrapper.append(line5);
 
-const lShift = document.createElement('div');
-lShift.textContent = 'LShift';
-lShift.style.padding = '5px';
-lShift.style.border = 1 + 'px solid grey';
-line5.append(lShift);
-
-new EventsMouseKey(lShift, 'Shift');
-
-const z = document.createElement('div');
-z.textContent = 'Z я';
-z.style.padding = '5px';
-z.style.border = 1 + 'px solid grey';
-line5.append(z);
-
-new EventsMouseKey(z, 'z');
-new EventsMouseKey(z, 'я');
-
-const x = document.createElement('div');
-x.textContent = 'X ч';
-x.style.padding = '5px';
-x.style.border = 1 + 'px solid grey';
-line5.append(x);
-
-new EventsMouseKey(x, 'x');
-new EventsMouseKey(x, 'ч');
-
-const c = document.createElement('div');
-c.textContent = 'C с';
-c.style.padding = '5px';
-c.style.border = 1 + 'px solid grey';
-line5.append(c);
-
-new EventsMouseKey(c, 'c');
-new EventsMouseKey(c, 'с');
-
-const v = document.createElement('div');
-v.textContent = 'V м';
-v.style.padding = '5px';
-v.style.border = 1 + 'px solid grey';
-line5.append(v);
-
-new EventsMouseKey(v, 'v');
-new EventsMouseKey(v, 'м');
-
-const b = document.createElement('div');
-b.textContent = 'B и';
-b.style.padding = '5px';
-b.style.border = 1 + 'px solid grey';
-line5.append(b);
-
-new EventsMouseKey(b, 'b');
-new EventsMouseKey(b, 'и');
-
-const n = document.createElement('div');
-n.textContent = 'N т';
-n.style.padding = '5px';
-n.style.border = 1 + 'px solid grey';
-line5.append(n);
-
-new EventsMouseKey(n, 'n');
-new EventsMouseKey(n, 'т');
-
-const m = document.createElement('div');
-m.textContent = 'M ь';
-m.style.padding = '5px';
-m.style.border = 1 + 'px solid grey';
-line5.append(m);
-
-new EventsMouseKey(m, 'm');
-new EventsMouseKey(m, 'ь');
-
-const line5ltr9 = document.createElement('div');
-line5ltr9.textContent = ',< б';
-line5ltr9.style.padding = '5px';
-line5ltr9.style.border = 1 + 'px solid grey';
-line5.append(line5ltr9);
-
-new EventsMouseKey(line5ltr9, ',');
-new EventsMouseKey(line5ltr9, 'б');
-
-const line5ltr10 = document.createElement('div');
-line5ltr10.textContent = '.> ю';
-line5ltr10.style.padding = '5px';
-line5ltr10.style.border = 1 + 'px solid grey';
-line5.append(line5ltr10);
-
-new EventsMouseKey(line5ltr10, '.');
-new EventsMouseKey(line5ltr10, 'ю');
-
-const line5ltr11 = document.createElement('div');
-line5ltr11.textContent = '/? .';
-line5ltr11.style.padding = '5px';
-line5ltr11.style.border = 1 + 'px solid grey';
-line5.append(line5ltr11);
-
-new EventsMouseKey(line5ltr11, '/');
-new EventsMouseKey(line5ltr11, '.');
-
-const rShift = document.createElement('div');
-rShift.textContent = 'RShift';
-rShift.style.padding = '5px';
-rShift.style.border = 1 + 'px solid grey';
-line5.append(rShift);
-
-new EventsMouseKey(rShift, 'Shift');
+array4.forEach((e) => {
+  const ltr = document.createElement('div');
+  ltr.textContent = e.textContent;
+  ltr.style.padding = e.padding;
+  ltr.style.border = e.border;
+  ltr.setAttribute('data-click', '')
+  ltr.setAttribute('id', e.code)
+  line5.append(ltr);
+});
 
 const line6 = document.createElement('div');
 line6.style.display = 'flex';
 wrapper.append(line6);
 
-const lCtrl = document.createElement('div');
-lCtrl.textContent = 'LCtrl';
-lCtrl.style.padding = '5px 10px';
-lCtrl.style.border = 1 + 'px solid grey';
-line6.append(lCtrl);
-
-new EventsMouseKey(lCtrl, 'Control');
-
-const win = document.createElement('div');
-win.textContent = 'win';
-win.style.padding = '5px 10px';
-win.style.border = 1 + 'px solid grey';
-line6.append(win);
-
-new EventsMouseKey(win, 'Meta');
-
-const lAlt = document.createElement('div');
-lAlt.textContent = 'Alt';
-lAlt.style.padding = '5px 10px';
-lAlt.style.border = 1 + 'px solid grey';
-line6.append(lAlt);
-
-new EventsMouseKey(lAlt, 'Alt');
-
-const space = document.createElement('div');
-space.textContent = '';
-space.style.padding = '5px 15px';
-space.style.border = 1 + 'px solid grey';
-space.style.width = '100px';
-line6.append(space);
-
-new EventsMouseKey(space, ' ');
-
-const rAlt = document.createElement('div');
-rAlt.textContent = 'Alt gr';
-rAlt.style.padding = '5px 10px';
-rAlt.style.border = 1 + 'px solid grey';
-line6.append(rAlt);
-
-new EventsMouseKey(rAlt, 'Alt');
-
-const rCtrl = document.createElement('div');
-rCtrl.textContent = 'Ctrl';
-rCtrl.style.padding = '5px 10px';
-rCtrl.style.border = 1 + 'px solid grey';
-line6.append(rCtrl);
-
-new EventsMouseKey(rCtrl, 'Control');
-
-const arrowLeft = document.createElement('div');
-arrowLeft.textContent = 'left';
-arrowLeft.style.padding = '5px 10px';
-arrowLeft.style.border = 1 + 'px solid grey';
-line6.append(arrowLeft);
-
-new EventsMouseKey(arrowLeft, 'ArrowLeft');
-
-
-const blockArrows = document.createElement('div');
-const arrowUp = document.createElement('div');
-arrowUp.textContent = 'up';
-arrowUp.style.border = '1px solid grey';
-new EventsMouseKey(arrowUp, 'ArrowUp');
-
-const arrowDown = document.createElement('div');
-arrowDown.textContent = 'down';
-arrowDown.style.border = '1px solid grey';
-blockArrows.append(arrowUp, arrowDown);
-line6.append(blockArrows);
-
-new EventsMouseKey(arrowDown, 'ArrowDown');
-
-const arrowRight = document.createElement('div');
-arrowRight.textContent = 'right';
-arrowRight.style.padding = '5px';
-arrowRight.style.border = 1 + 'px solid grey';
-line6.append(arrowRight);
-
-new EventsMouseKey(arrowRight, 'ArrowRight');
+array5.forEach((e) => {
+  const ltr = document.createElement('div');
+  ltr.textContent = e.textContent;
+  ltr.style.padding = e.padding;
+  ltr.style.border = e.border;
+  ltr.setAttribute('data-click', '')
+  ltr.setAttribute('id', e.code)
+  line6.append(ltr);
+});
 
 const txt = document.createElement('textarea');
 txt.setAttribute('placeholder', 'Введите текст');
