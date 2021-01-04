@@ -1,6 +1,6 @@
 function initEventsListener() {
   document.addEventListener("click", (event) => {
-    if (event.target || event.target.dataset.click !== undefined) {
+    if (event.target && event.target.dataset.click !== undefined) {
       event.target.classList.add("active");
       setTimeout(() => {
         event.target.classList.remove("active");
