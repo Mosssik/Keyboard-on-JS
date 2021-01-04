@@ -1,8 +1,0 @@
-function CreateLine() {
-  const nameLine = document.createElement("div");
-  nameLine.style.display = "flex";
-  nameLine.style.margin = "0 0 3px 0";
-  wrapper.append(nameLine);
-}
-
-export { CreateLine };
